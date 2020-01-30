@@ -1,2 +1,1 @@
-# todo-course
-I have junior developer in my team, this is course for him by me. 
+Проект для моего джуниор-разработчика. Если ты это читаешь - с тебя пицца за труды (я пошутил). 
