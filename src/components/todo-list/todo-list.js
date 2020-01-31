@@ -3,21 +3,23 @@ import TodolistItem from '../todo-list-item/todo-list-item';
 
 import './todo-list.css';
 
-const Todolist = ({ todos }) => {
+const Todolist = ({ todos, onDeleted }) => {
 
     const elements = todos.map((item) => {
 
         const { id, ...itemProps } = item
 
-       return ( 
-       <li key={item.id} className="list-group-item" >
-           <TodolistItem { ...itemProps } />
-       </li> );  
+        return (
+            <li key={id} className="list-group-item" >
+                <TodolistItem {...itemProps} 
+                onDeleted={()=> onDeleted(id)}
+                />
+            </li>);
     });
 
     return (
         <ul className="list-group todo-list">
-        { elements }
+            {elements}
         </ul>
     )
 };
